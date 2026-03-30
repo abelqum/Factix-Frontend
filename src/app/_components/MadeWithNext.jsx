@@ -1,6 +1,6 @@
 export default function MadeWithNext() {
   return (
-    <div className="w-full pb-10 pt-4 flex flex-col items-center justify-center gap-1 opacity-50 hover:opacity-100 transition-opacity duration-300">
+    <div className="w-full pb-5 pt-5 flex flex-col items-center justify-center gap-1 opacity-50 hover:opacity-100 transition-opacity duration-300">
       <p className="text-[10px] md:text-xs font-medium tracking-wide">
         © {new Date().getFullYear()}{" "}
         <span className="">Abel Mauricio Quiroz Mora</span>
