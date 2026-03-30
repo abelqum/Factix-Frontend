@@ -1,26 +1,40 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Fondos y Textos */
+  --color-bg-primary: #f8fafc;
+  --color-bg-secondary: #ffffff;
+  --color-text-primary: #0f172a;
+  --color-text-secondary: #475569;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Acentos (Tu degradado Índigo) */
+  --color-accent-primary: #3b82f6;
+  --color-accent-secondary: #8b5cf6;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Estados (Alertas) */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  /* Sidebar Específico */
+  --color-sidebar-bg: #1e293b;
+  --color-sidebar-text: #f8fafc;
+  --color-sidebar-hover: #334155;
+  --color-sidebar-active: #2563eb;
+
+  /* Tarjetas y Bordes */
+  --color-border-card: #e2e8f0;
+  --shadow-card:
+    0px 4px 6px -1px rgba(0, 0, 0, 0.1), 0px 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+  /* Fuente Inter */
+  --font-inter: "Inter", sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
