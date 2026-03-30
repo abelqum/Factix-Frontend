@@ -1,7 +1,7 @@
 export default function ResponsiveIcon({ setMenu, menuOpen }) {
   return (
     <button
-      className="ml-auto hover:text-sidebar-active hover:bg-sidebar-bg rounded-full p-1 md:hidden"
+      className="ml-auto  hover:bg-rounded-full p-1 md:hidden"
       id="hamb"
       onClick={() => setMenu(!menuOpen)}
     >
