@@ -21,6 +21,6 @@ export const links = [
   },
   {
     link: "Iniciar Sesion",
-    url: "/iniciar-sesion",
+    url: "/login",
   },
 ];
