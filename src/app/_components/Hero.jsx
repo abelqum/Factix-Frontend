@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import H1 from "./H1";
 
 export default function Hero() {
   return (
@@ -8,16 +9,13 @@ export default function Hero() {
       <section className="grid md:grid-cols-2 items-center gap-7 md:gap-16 w-full max-w-[1100px]">
         {/* Lado izquierdo */}
         <div className="flex flex-col items-center md:items-start text-center md:text-left w-full">
-          <h1 className="text-4xl md:text-5xl lg:text-[54px] font-extrabold text-slate-900 leading-[1.15]">
-            Gestión y Análisis de Facturación
-          </h1>
+          <H1>Gestión y Análisis de Facturación</H1>
 
           <p className="mt-6 text-base md:text-lg text-slate-600 max-w-[450px]">
             Automatiza, migra y visualiza tu negocio. La herramienta que
             necesitabas, sin complicaciones.
           </p>
 
-          {/* El Link ahora tiene las clases del botón directamente */}
           <Link
             href="/login"
             className="mt-8 inline-block w-fit bg-gradient-to-r from-[#3B82F6] from-0% via-[#6D6AF6] via-[31%] to-[#8B5CF6] to-[64%] text-white font-semibold py-3.5 px-8 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
