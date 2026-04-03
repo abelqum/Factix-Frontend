@@ -1,13 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react"; // Importamos el icono
-import Logo from "../_components/Logo";
-import H1 from "../_components/H1";
 
 export default function StartLayout({ children }) {
   return (
     // Agregamos "relative" al main para que el botón flote en relación a este contenedor
-    <main className="w-full relative flex items-center justify-center md:grid md:grid-cols-2">
+    <main className="w-full h-screen relative flex items-center justify-center md:grid md:grid-cols-2">
       {/* 🌟 BOTÓN DE REGRESO FLOTANTE 🌟 */}
       <Link
         href="/"
@@ -28,17 +26,7 @@ export default function StartLayout({ children }) {
         />
       </section>
 
-      <section className="h-screen flex items-center justify-center">
-        <div>
-          <div className="flex flex-col items-center justify-center gap-5 mb-7">
-            <Logo />
-            <H1 className="text-center">Iniciar Sesión</H1>
-          </div>
-          <div className="flex flex-col items-center justify-center">
-            {children}
-          </div>
-        </div>
-      </section>
+      {children}
     </main>
   );
 }

@@ -4,11 +4,13 @@ import ForgPass from "@/app/_components/ForgPass";
 import RememberMe from "@/app/_components/RememberMe";
 import Link from "next/link";
 import StarTitle from "@/app/_components/StaTtIle";
-export default function Login() {
+export default function AddCompany() {
   return (
     <section className="p-8 md:p-0 md:h-screen rounded-3xl md:rounded-none flex items-center justify-center shadow-2xl md:shadow-0">
       <div>
-        <StarTitle title="Iniciar Sesión" />
+        <StarTitle title="¡Bienvenido a Factix! ">
+          Agrega los datos de tu negocio para configurar Factix
+        </StarTitle>
         <div className="flex flex-col items-center justify-center">
           <Form className="w-[90%] mx-auto ">
             <InputForm
