@@ -8,7 +8,7 @@ import { useState } from "react";
 export default function MenuHome() {
   const [menuOpen, setMenu] = useState(false);
   return (
-    <nav className="flex items-center justify-end w-full relative">
+    <nav className="flex items-center justify-between w-full relative">
       <ul className="  gap-8  md:flex justify-around items-center hidden  font-semibold w-full">
         {links.map((el, i) =>
           i == links.length - 1 ? (
