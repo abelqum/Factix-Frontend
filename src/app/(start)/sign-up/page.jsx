@@ -1,87 +1,87 @@
 import StarTitle from "@/app/_components/StaTtIle";
 import ButtonForm from "@/app/_components/ButtonForm";
-export default function AddCompany() {
+export default function SignUp() {
   return (
     <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
-      <StarTitle title="Agrega tus datos">
-        Agrega los datos de tu negocio para configurar Factix.
+      <StarTitle title="Crea tu cuenta">
+        Crea una cuenta de administrador para poder manejar a tu empresa.
       </StarTitle>
       <form className="flex flex-col gap-4">
-        {/* Razón Social */}
+        {/* Nombre */}
         <div>
           <label className="block text-sm font-bold text-slate-700 mb-1.5">
-            Razón Social:
+            Nombre(s):
           </label>
           <input
             type="text"
-            placeholder="Mi Empresa S.A. de C.V."
+            placeholder="Juan Carlos"
             className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#6D6AF6] focus:border-transparent transition-all text-slate-900"
           />
         </div>
 
-        {/* RFC + Código Postal */}
+        {/* Apellidos */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-bold text-slate-700 mb-1.5">
-              RFC:
+              Apellido paterno:
             </label>
             <input
               type="text"
-              placeholder="ABC123456T89"
-              className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#6D6AF6] focus:border-transparent transition-all text-slate-900 uppercase"
+              placeholder="García"
+              className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#6D6AF6] focus:border-transparent transition-all text-slate-900"
             />
           </div>
 
           <div>
             <label className="block text-sm font-bold text-slate-700 mb-1.5">
-              Código Postal:
+              Apellido materno:
             </label>
             <input
               type="text"
-              placeholder="52763"
+              placeholder="López"
               className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#6D6AF6] focus:border-transparent transition-all text-slate-900"
             />
           </div>
         </div>
 
-        {/* Email del negocio */}
+        {/* Correo */}
         <div>
           <label className="block text-sm font-bold text-slate-700 mb-1.5">
-            Email de tu negocio:
+            Correo:
           </label>
           <input
             type="email"
-            placeholder="contacto@empresa.com"
+            placeholder="correo@ejemplo.com"
             className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#6D6AF6] focus:border-transparent transition-all text-slate-900"
           />
         </div>
 
-        {/* Dirección */}
+        {/* Contraseña */}
         <div>
           <label className="block text-sm font-bold text-slate-700 mb-1.5">
-            Dirección:
+            Contraseña:
           </label>
           <input
-            type="text"
-            placeholder="Calle, número, colonia..."
+            type="password"
+            placeholder="••••••••"
             className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#6D6AF6] focus:border-transparent transition-all text-slate-900"
           />
         </div>
 
-        {/* Régimen Fiscal */}
+        {/* Teléfono */}
         <div>
           <label className="block text-sm font-bold text-slate-700 mb-1.5">
-            Régimen Fiscal:
+            Teléfono:
           </label>
           <input
-            type="text"
-            placeholder="Ej: Régimen General de Ley"
+            type="tel"
+            placeholder="55 1234 5678"
             className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#6D6AF6] focus:border-transparent transition-all text-slate-900"
           />
         </div>
 
         {/* Botón */}
-        <ButtonForm>Comenzar</ButtonForm>
+        <ButtonForm>Crear cuenta</ButtonForm>
       </form>
     </div>
   );

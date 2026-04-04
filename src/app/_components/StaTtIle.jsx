@@ -1,12 +1,19 @@
 import Logo from "./Logo";
-import H1 from "./H1";
-
+import Image from "next/image";
 export default function StarTitle({ title, children }) {
   return (
-    <div className="text-center leading-tight flex flex-col items-center justify-center gap-5 mb-7">
-      <Logo />
-      <H1 clasess="text-center">{title}</H1>
-      <p className="text-center">{children}</p>
+    <div className="mb-5 text-center flex flex-col items-center gap-3">
+      <Image
+        src="/img/logo-vectorizado.webp"
+        alt="logo factix"
+        width={100}
+        height={40}
+        className="w-auto h-5 object-contain "
+      />
+      <h2 className="md:text-4xl text-3xl font-extrabold text-slate-900 tracking-tight ">
+        {title}
+      </h2>
+      <p className="text-slate-500 ">{children}</p>
     </div>
   );
 }

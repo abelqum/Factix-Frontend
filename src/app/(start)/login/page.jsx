@@ -1,23 +1,21 @@
+import ButtonForm from "@/app/_components/ButtonForm";
+import StarTitle from "@/app/_components/StaTtIle";
+import { Star } from "lucide-react";
 import Link from "next/link";
 
 export default function Login() {
   return (
     <div className="w-full animate-in fade-in slide-in-from-bottom-4 duration-700">
       {/* Cabecera del Formulario */}
-      <div className="mb-8">
-        <h2 className="text-3xl font-extrabold text-slate-900 tracking-tight">
-          Bienvenido de nuevo
-        </h2>
-        <p className="text-slate-500 mt-2">
-          Ingresa a tu panel de administración.
-        </p>
-      </div>
+      <StarTitle title="Iniciar Sesión">
+        Ingresa tus credenciales para acceder.
+      </StarTitle>
 
       <form className="flex flex-col gap-5">
         {/* Input Correo */}
         <div>
           <label className="block text-sm font-bold text-slate-700 mb-1.5">
-            Correo Electrónico
+            Correo Electrónico:
           </label>
           <input
             type="email"
@@ -30,7 +28,7 @@ export default function Login() {
         <div>
           <div className="flex justify-between items-center mb-1.5">
             <label className="block text-sm font-bold text-slate-700">
-              Contraseña
+              Contraseña:
             </label>
             <Link
               href="/recuperar"
@@ -47,19 +45,14 @@ export default function Login() {
         </div>
 
         {/* Botón */}
-        <button
-          type="button" // Cambiar a submit cuando tengas lógica
-          className="w-full bg-slate-900 hover:bg-slate-800 text-white font-bold py-3.5 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5 mt-2"
-        >
-          Iniciar Sesión
-        </button>
+        <ButtonForm>Ingresar</ButtonForm>
       </form>
 
       {/* Enlace a registro */}
       <p className="text-center text-sm text-slate-500 mt-8">
         ¿No tienes cuenta?{" "}
         <Link
-          href="/add-company"
+          href="/sign-up"
           className="font-bold text-[#6D6AF6] hover:underline"
         >
           Crea una gratis
