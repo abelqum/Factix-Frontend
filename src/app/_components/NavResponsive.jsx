@@ -5,7 +5,7 @@ export default function NavResponsive({ menuOpen, setMenu }) {
   return (
     <div
       className={`
-        absolute top-full left-0 w-full min-h-screen md:hidden z-40
+        fixed top-[88px] left-0 w-full min-h-screen md:hidden z-40
         transition-all duration-500 overflow-hidden
        
         ${menuOpen ? "visible" : "invisible"}
@@ -22,7 +22,7 @@ export default function NavResponsive({ menuOpen, setMenu }) {
 
       <div
         className={`
-          absolute top-0 right-0 w-[85%] min-h-screen bg-sidebar-bg shadow-2xl
+          absolute top-0 right-0 w-[55%] min-h-screen bg-sidebar-bg shadow-2xl
           transition-transform duration-500 ease-in-out
           ${menuOpen ? "translate-x-0" : "translate-x-full"}
         `}

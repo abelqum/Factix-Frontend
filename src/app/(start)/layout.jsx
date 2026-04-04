@@ -1,32 +1,52 @@
-import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft } from "lucide-react"; // Importamos el icono
+import { ArrowLeft } from "lucide-react";
+import Logo from "../_components/Logo"; // Asegúrate de que la ruta sea correcta
 
-export default function StartLayout({ children }) {
+export default function AuthLayout({ children }) {
   return (
-    // Agregamos "relative" al main para que el botón flote en relación a este contenedor
-    <main className="w-full h-screen relative flex items-center justify-center md:grid md:grid-cols-2">
-      {/* 🌟 BOTÓN DE REGRESO FLOTANTE 🌟 */}
-      <Link
-        href="/"
-        className="absolute top-6 left-6 sm:top-8 sm:left-8 z-50 flex items-center justify-center w-10 h-10 rounded-full bg-slate-200/50 md:bg-white/10 backdrop-blur-sm text-text-primary md:text-white hover:-translate-x-1 transition-transform"
-        title="Volver al inicio"
-      >
-        <ArrowLeft className="w-6 h-6" />
-      </Link>
+    <main className="min-h-screen w-full flex bg-white font-sans">
+      {/* 🌟 LADO IZQUIERDO: MARCA (Solo Desktop) 🌟 */}
+      {/* Ocupa el 50% de la pantalla. Un panel fijo, limpio y corporativo. */}
+      <section className="hidden lg:flex flex-col justify-between w-1/2 bg-gradient-to-br from-[#3B82F6] via-[#6D6AF6] to-[#8B5CF6] p-12 relative overflow-hidden">
+        {/* Botón de regreso para Desktop */}
+        <Link
+          href="/"
+          className="text-white/80 hover:text-white transition-colors w-fit flex items-center gap-2"
+        >
+          <ArrowLeft className="w-5 h-5" /> Volver al inicio
+        </Link>
 
-      <section className="hidden md:flex items-center justify-center h-screen bg-gradient-to-r from-[#3B82F6] from-0% via-[#6D6AF6] via-[31%] to-[#8B5CF6] to-[64%]">
-        <Image
-          src="/img/x-blanca.webp"
-          alt="Logo Factix"
-          width={500}
-          height={500}
-          className="w-full max-w-[320px] md:max-w-[420px] lg:max-w-[500px] h-auto object-contain"
-          priority
-        />
+        {/* Mensaje de marca y Logo */}
+        <div className="relative z-10 max-w-md">
+          {/* Si tienes un logo blanco, úsalo aquí. Si no, le puedes poner la clase "brightness-0 invert" a la imagen en tu componente Logo */}
+          <Logo />
+          <h1 className="text-4xl xl:text-5xl font-extrabold text-white mt-8 leading-tight tracking-tight">
+            El sistema de facturación que tu negocio merece.
+          </h1>
+          <p className="text-indigo-100 mt-6 text-lg">
+            Timbra, gestiona y crece sin límites ni complicaciones técnicas.
+          </p>
+        </div>
+
+        <div className="text-white/60 text-sm">
+          © 2026 Factix. Todos los derechos reservados.
+        </div>
       </section>
 
-      {children}
+      {/* 🌟 LADO DERECHO: CONTENIDO (Formularios) 🌟 */}
+      {/* En celular ocupa todo el ancho. En Desktop ocupa la otra mitad. */}
+      <section className="flex-1 flex flex-col justify-center items-center p-6 sm:p-12 relative">
+        {/* Botón de regreso para Móvil (Solo visible en celular) */}
+        <Link
+          href="/"
+          className="lg:hidden absolute top-6 left-6 text-slate-400 hover:text-slate-600 transition-colors"
+        >
+          <ArrowLeft className="w-6 h-6" />
+        </Link>
+
+        {/* El contenedor sagrado de 400px. NUNCA se estirará de más. */}
+        <div className="w-full max-w-[400px]">{children}</div>
+      </section>
     </main>
   );
 }
